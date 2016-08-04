@@ -27,7 +27,7 @@ do
         fi
         hnum=1
         # Print heading ( hopefully its beautiful and readable )
-        clear && echo "\n\n\n\n\n\n\n\n\n\n\n" && figlet -f script -c -w $COLUMNS "$heading" | lolcat && echo "\n\n\n"
+        clear && echo "\n\n\n\n\n\n\n\n" && figlet -f script -c -w $COLUMNS "$heading" | lolcat && echo "\n\n\n"
     else
         # Print description text line by line
         echo "$line" | fmt -c -w $COLUMNS
