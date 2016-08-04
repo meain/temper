@@ -36,3 +36,4 @@ done <"$file"
 
 # Final wait befor going back to the shell
 read choice <&3
+clear
