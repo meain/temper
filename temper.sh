@@ -1,10 +1,12 @@
+# Copy the filename from the argument
 file="$1"
+
 hnum=0
 
-# This is for use by figlet( center text )
+# This is for use by figlet and fmt( center text )
 COLUMNS=$(tput cols) 
 
-# Hack to get the pause before net slide working
+# Hack to get the pause before next slide working
 exec 3<&0
 
 # Report error on template file not available
