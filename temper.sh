@@ -1,7 +1,6 @@
 file="$1"
-ln=0
 
-# This is for use by fmt( center text )
+# This is for use by figlet( center text )
 COLUMNS=$(tput cols) 
 
 # Report error on template file not available
@@ -18,8 +17,10 @@ do
     # Check for heading (denoted by # in the first place)
     if [ "$beg" = "#" ]; then
         heading=("${line[@]:1}")
+        # Print heading ( hopefully its beautiful and readable )
         clear && echo "\n\n\n\n\n\n\n\n\n\n\n" && figlet -f script -c -w $COLUMNS "$heading" | lolcat && echo "\n\n\n"
     else
+        # Print description text line by line
         echo "$line" | fmt -c -w $COLUMNS
     fi
 done <"$file"
