@@ -20,6 +20,8 @@ Headings should start with a '#'
 
 -- leave a line between the heading and description  --
 
+-- increase size to make it look cool --
+
 Add a way to input code( maybe give it background color or something )
 Also have something for bold too
 Spaces are also taken into consideration when centering
