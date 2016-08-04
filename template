@@ -1,3 +1,24 @@
 #todo
+
 Add a sample template file
 Add  README and LICENSE
+
+#how to use
+
+It is pretty easy to use, all you have to do is add a template file
+Every single line other than the heading will be print normally centered
+The heading will have something fancy
+
+It is recommended that you leave spaces in between to make ti look cleaner
+Also if you doing some code presentaions, you can have snippets at the top.
+** IT WOULD LOOK AWESOME **
+
+#more
+
+Headings should start with a '#'
+
+-- leave a line between the heading and description  --
+
+Add a way to input code( maybe give it background color or something )
+Also have something for bold too
+Spaces are also taken into consideration when centering
