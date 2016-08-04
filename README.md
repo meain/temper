@@ -27,4 +27,4 @@ A title is specified with a hash at the begining and the description is given as
 All the text that follows it until the next heading is considered as a part of the previous header.
 
 ## Screenshot
-![screenshot](http://i.imgur.com/AFqL00o.png)
+![screenshot](http://i.imgur.com/izg7YJp.png)
