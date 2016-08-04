@@ -1,4 +1,5 @@
 file="$1"
+hnum=0
 
 # This is for use by figlet( center text )
 COLUMNS=$(tput cols) 
@@ -21,7 +22,10 @@ do
     if [ "$beg" = "#" ]; then
         heading=("${line[@]:1}")
         # Cannot do normal read as it just considers read from the file
-        read choice <&3
+        if [ "$hnum" -eq 1 ]; then
+            read choice <&3
+        fi
+        hnum=1
         # Print heading ( hopefully its beautiful and readable )
         clear && echo "\n\n\n\n\n\n\n\n\n\n\n" && figlet -f script -c -w $COLUMNS "$heading" | lolcat && echo "\n\n\n"
     else
