@@ -3,6 +3,9 @@ file="$1"
 # This is for use by figlet( center text )
 COLUMNS=$(tput cols) 
 
+# Hack to get the pause before net slide working
+exec 3<&0
+
 # Report error on template file not available
 if ! [ -f "$file" ];
 then
@@ -17,6 +20,8 @@ do
     # Check for heading (denoted by # in the first place)
     if [ "$beg" = "#" ]; then
         heading=("${line[@]:1}")
+        # Cannot do normal read as it just considers read from the file
+        read choice <&3
         # Print heading ( hopefully its beautiful and readable )
         clear && echo "\n\n\n\n\n\n\n\n\n\n\n" && figlet -f script -c -w $COLUMNS "$heading" | lolcat && echo "\n\n\n"
     else
