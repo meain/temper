@@ -16,6 +16,16 @@ then
    exit 1
 fi
 
+# Function to print the heading
+printheading(){
+    clear && echo "\n\n\n\n\n\n\n\n" && figlet -f script -c -w $COLUMNS "$*" | lolcat && echo "\n\n\n"
+}
+
+#Function to print ordinary line
+printline(){
+    printf "%*s\n" $(( ( $(echo $* | wc -c ) + $COLUMNS ) / 2 )) "$*"
+}
+
 # Work on the template file
 while IFS= read line
 do
@@ -29,10 +39,11 @@ do
         fi
         hnum=1
         # Print heading ( hopefully its beautiful and readable )
-        clear && echo "\n\n\n\n\n\n\n\n" && figlet -f script -c -w $COLUMNS "$heading" | lolcat && echo "\n\n\n"
+        printheading "$heading"
     else
         # Print description text line by line
-        echo "$line" | fmt -c -w $COLUMNS
+        printline "$line"
+
     fi
 done <"$file"
 
