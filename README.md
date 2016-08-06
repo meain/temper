@@ -26,5 +26,10 @@ It is arranges down in the order of they appear ( `title1` `description1` `title
 A title is specified with a hash at the begining and the description is given as the text following it.
 All the text that follows it until the next heading is considered as a part of the previous header.
 
+# Requirements
+
+* figlet - for beautified heading
+* lolcat - to color stuff
+
 ## Screenshot
 ![screenshot](http://i.imgur.com/izg7YJp.png)
