@@ -4,7 +4,7 @@ file="$1"
 hnum=0
 
 # This is for use by figlet and fmt( center text )
-COLUMNS=$(tput cols) 
+COLUMNS=$(tput cols)
 
 # Hack to get the pause before next slide working
 exec 3<&0
@@ -18,7 +18,7 @@ fi
 
 # Function to print the heading
 printheading(){
-    clear && echo "\n\n\n\n\n\n\n\n" && figlet -f script -c -w $COLUMNS "$*" | lolcat && echo "\n\n\n"
+    clear && printf "\n\n\n\n\n\n\n\n" && figlet -f script -c -w $COLUMNS "$*" | lolcat && printf "\n\n\n"
 }
 
 #Function to print ordinary line
