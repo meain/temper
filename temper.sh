@@ -23,7 +23,6 @@ printheading(){
 
 #Function to print ordinary line
 printline(){
-    # printf "%*s\n" $(( ( $(echo $* | wc -c ) + $COLUMNS ) / 2 )) "$*"
     echo "$*" | fmt -c -w $COLUMNS
 }
 
