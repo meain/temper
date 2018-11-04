@@ -33,3 +33,8 @@ All the text that follows it until the next heading is considered as a part of t
 
 ## Screenshot
 ![screenshot](http://i.imgur.com/izg7YJp.png)
+
+## TODO
+
+- [ ] Center content by fetching width and height from shell
+- [ ] Basic markdown support. Bold, underline etc...
